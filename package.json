@@ -10,10 +10,18 @@
     "@actions/github": "^6.0.0"
   },
   "devDependencies": {
-    "@vercel/ncc": "^0.38.1"
+    "@babel/core": "^7.24.0",
+    "@babel/plugin-transform-typescript": "^7.23.6",
+    "@babel/preset-env": "^7.24.0",
+    "@babel/preset-typescript": "^7.23.3",
+    "@vercel/ncc": "^0.38.1",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.3.3",
+    "webpack": "^5.90.3",
+    "webpack-cli": "^5.1.4"
   },
   "scripts": {
-    "build": "ncc build src/index.js -o dist",
+    "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   }
 }

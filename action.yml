@@ -16,4 +16,4 @@ inputs:
     default: 'multi-comment-maintain-section'
 runs:
   using: 'node20'
-  main: 'dist/index.js'
+  main: 'build/main-bundle.js'
