@@ -1,0 +1,34 @@
+name: Test
+
+on:
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  pull-requests: write
+  
+jobs:
+  checks:
+    name: Checks
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Run test
+        uses: ./
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          body: |
+            # Test
+            This is a test
+          section-marker: "test-1"
+      - name: Run another test
+        uses: ./
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          body: |
+            # Test
+            This is another test
+          section-marker: "test-2"

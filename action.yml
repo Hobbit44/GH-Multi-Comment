@@ -1,0 +1,19 @@
+name: 'Multi Comment Maintain'
+inputs:
+  token:
+    description: 'GitHub token'
+    required: true
+  body:
+    description: 'Body of the comment'
+    required: true
+  comment-marker:
+    description: 'Marker of the comment you want to add/amend'
+    required: true
+    default: 'multi-comment-maintain'
+  section-marker:
+    description: 'Marker of the section you want to add/amend'
+    required: true
+    default: 'multi-comment-maintain-section'
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
